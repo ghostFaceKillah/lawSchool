@@ -2,6 +2,7 @@ var http = require('http'),
     url = require('url'),
     path = require('path'),
     fs = require('fs');
+
 var mimeTypes = {
   "html": "text/html",
   "jpeg": "image/jpeg",
@@ -13,7 +14,12 @@ var mimeTypes = {
 http.createServer(function(req, res) {
   var uri = url.parse(req.url).pathname;
   var filename = path.join(process.cwd(), uri);
-  path.exists(filename, function(exists) {
+
+  if (uri === "" || uri == "/") {
+    filename = path.join(process.cwd(), "index.html")
+  }
+
+  fs.exists(filename, function(exists) {
     if(!exists) {
       console.log("not exists: " + filename);
       res.writeHead(200, {'Content-Type': 'text/plain'});

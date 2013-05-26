@@ -1,28 +1,112 @@
-<html>
- <head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Law-o-matic &middot; Prawo konstytucyjne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mike Garmulewicz">
+
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+      padding-top: 20px;
+      padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+    </style>
+
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <form name="interm" method="post">
+            <button type="button" class="btn btn-small btn-info" id="prev"><i class="icon-arrow-left icon-white"></i></button>
+            <button type="button" class="btn btn-small btn-warning" id="showhide">Show/Hide</button>
+            <button type="button" class="btn btn-small btn-success" id="next"><i class="icon-arrow-right icon-white"></i></button>
+            <button type="button" class="btn btn-small btn-danger" id="random">Random</button>
+            <button type="button" class="btn btn-small btn-primary" id="button">Idź do</button>
+            <input type="text" class="input-medium search-query"  id="letter" name="letter"></input>
+          </form>
+        </ul>
+
+        <h3 class="muted"> <i class="icon-heart icon-big"> </i> Law-o-matic</h3>
+      </div>
+
+      <hr>
+      <div class="row-fluid marketing">
+        <div class="span9 offset1">
+          <h4 id="question">Prawo konstytucyjne w stylu Super Memo</h4>
+          <br>
+          <p id="answer" style="display: block"> Prosta strona do odpytek z prawa.<br>
+          Gdy przeczytasz tę wiadomość do końca wypróbuj skróty klawiszowe!<br> strzałka
+          w lewo lub a - poprzednie pytanie, strzałka w prawo lub d - następne pytanie,
+          strzałka w dół bądź s  - pokaż/ukryj odpowiedź, strzałka w górę badź r - losowe pytanie
+          <br> <br>
+          Pytania w bazie są przepisaną w formie pytań i odpowiedzi Konstytucją. Jest
+          parę literówek. Nie gwarantuje kompletności odpowiedzi, ale starałem się. <br> <br> 
+
+          Jeśli uważasz, że jakieś pytanie jest bez sensu, masz pytania do bazy którymi
+          chciałbyś/chciałabyś
+          się podzielić na tej stronie lub masz opinię (pochlebną?), napisz 
+          garmulewicz@gmail.com
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p class="muted">&copy; Law-o-matic 2013; Prawo konstytucyjne w stylu Super Memo; garmulewicz (at) gmail dot com</p>
+      </div>
+
+    </div> <!-- /container -->
+
    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
    <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
    <script src="action.js"></script>
- </head>
-  <body>
-    <center>
-      <p>
-      <h3>Legenda</h3>
-      a - poprzedni, s - show/hide ans, d - nastepny, r - losowe pytanie <br>
-      </p>
-      <p> 
-      <form name="interm" method="post">
-      <button type="button" id="next">Next</button>
-      <button type="button" id="showhide">Show/Hide</button>
-      <button type="button" id="prev">Previous</button>
-      <input type="text" id="letter" name="letter"></input>
-      <button type="button" id="button">Goto</button>
-      <button type="button" id="random">Random</button>
-      </form>
-      </p>
-    <p id="number"></p>
-    <p id="question"></p>
-    <p id="answer" style="display: none"></p>
-    </center>
   </body>
 </html>
+

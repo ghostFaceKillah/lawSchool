@@ -8,30 +8,26 @@ function doThings(textLines) {
     answers.push(str_dcmp[1]);
   };
 
-  var which = Math.round(Math.random()*answers.length) - 1;
-
-  $('#number').text( which );
-  $('#question').text( questions[which] );
-  $('#answer').text( answers[which] );
+  which = 110;
 
   $(window).keydown(function(event){
     if(event.keyCode == 13) {
       event.preventDefault();
       return react();
     }
-    if(event.keyCode == 83) {
+    if(event.keyCode == 83 || event.keyCode == 40) {
       event.preventDefault();
       return showhide();
     }
-    if(event.keyCode == 65) {
+    if(event.keyCode == 65 || event.keyCode == 37) {
       event.preventDefault();
       return prev();
     }
-    if(event.keyCode == 68) {
+    if(event.keyCode == 68 || event.keyCode == 39) {
       event.preventDefault();
       return next();
     }
-    if(event.keyCode == 82) {
+    if(event.keyCode == 82  || event.keyCode == 38 ) {
       event.preventDefault();
       return rand();
     }
@@ -46,7 +42,7 @@ function doThings(textLines) {
   function update(whichOne) {
     which = whichOne;
     $('#number').text( whichOne );
-    $('#question').text( questions[whichOne] );
+    $('#question').text( which+". "+ questions[whichOne] );
     $('#answer').text( answers[whichOne] );
     var ele = document.getElementById("answer");
     if(ele.style.display == "block") {
