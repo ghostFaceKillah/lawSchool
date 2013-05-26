@@ -1,0 +1,29 @@
+<html>
+ <head>
+   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+   <script src="action.js"></script>
+ </head>
+  <body>
+    <center>
+      <p>
+      <h3>Legenda</h3>
+      klawiatura <br>
+      a - poprzedni, s - show/hide ans, d - nastepny, r - losowe pytanie <br>
+      </p>
+      <p> 
+      <form name="interm" method="post">
+      <button type="button" id="next">Next</button>
+      <button type="button" id="showhide">Show/Hide</button>
+      <button type="button" id="prev">Previous</button>
+      <input type="text" id="letter" name="letter"></input>
+      <button type="button" id="button">Goto</button>
+      <button type="button" id="random">Random</button>
+      </form>
+      </p>
+    <p id="number"></p>
+    <p id="question"></p>
+    <p id="answer" style="display: none"></p>
+    </center>
+  </body>
+</html>
