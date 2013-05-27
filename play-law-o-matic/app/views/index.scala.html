@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="Mike Garmulewicz">
 
-    <!-- <link href="/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <style type="text/css">
       body {
@@ -46,15 +45,12 @@
         margin-top: 28px;
       }
 
+      h3.muted > a {
+        color: #999;
+        text-decoration: none;
+      }
+
     </style>
-
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="../assets/ico/favicon.png">
   </head>
 
   <body>
@@ -73,7 +69,9 @@
           </form>
         </ul>
 
-        <h3 class="muted"> <i class="icon-heart icon-big"> </i> Law-o-matic</h3>
+        <h3 class="muted">
+          <a href='/'><i class="icon-heart icon-big"> </i> Law-o-matic</a>
+        </h3>
       </div>
 
       <hr>
@@ -81,19 +79,30 @@
         <div class="span9 offset1">
           <h4 id="question">Prawo konstytucyjne w stylu Super Memo</h4>
           <br>
-          <p id="answer" style="display: block"> Prosta strona do odpytek z prawa.<br>
-          Gdy przeczytasz tę wiadomość do końca wypróbuj skróty klawiszowe!<br> strzałka
-          w lewo lub a - poprzednie pytanie, strzałka w prawo lub d - następne pytanie,
-          strzałka w dół bądź s  - pokaż/ukryj odpowiedź, strzałka w górę badź r - losowe pytanie
-          <br> <br>
-          Pytania w bazie są przepisaną w formie pytań i odpowiedzi Konstytucją. Jest
-          parę literówek. Nie gwarantuje kompletności odpowiedzi, ale starałem się. <br> <br> 
+          <div id='answer' style="display: block"> 
+            <p> Prosta strona do odpytek z prawa.<br>
+            Gdy przeczytasz tę wiadomość do końca wypróbuj skróty klawiszowe!<br>
+            <dl>
+              <dt>strzałka w lewo lub a</dt>
+              <dd>poprzednie pytanie</dd>
+              <dt>strzałka w prawo lub d  </dt>
+              <dd>następne pytanie</dd>
+              <dt>strzałka w dół bądź s</dt>
+              <dd>pokaż/ukryj odpowiedź</dd>
+              <dt>strzałka w górę badź r</dt>
+              <dd>losowe pytanie</dd>
+            </dl>
+            </p>
+            <p>
+            Pytania w bazie są przepisaną w formie pytań i odpowiedzi Konstytucją. Jest
+            parę literówek. Nie gwarantuje kompletności odpowiedzi, ale starałem się. <br> <br> 
 
-          Jeśli uważasz, że jakieś pytanie jest bez sensu, masz pytania do bazy którymi
-          chciałbyś/chciałabyś
-          się podzielić na tej stronie lub masz opinię (pochlebną?), napisz 
-          garmulewicz@@gmail.com
-          </p>
+            Jeśli uważasz, że jakieś pytanie jest bez sensu, masz pytania do bazy którymi
+            chciałbyś/chciałabyś
+            się podzielić na tej stronie lub masz opinię (pochlebną?), napisz 
+            <a href='mailto:garmulewicz@@gmail.com'>garmulewicz@@gmail.com</a>
+            </p>
+          </div>
         </div>
       </div>
 
